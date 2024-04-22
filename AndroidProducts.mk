@@ -1,7 +1,7 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_selene.mk
+    $(LOCAL_DIR)/pb_selene.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_selene-user \
-    omni_selene-userdebug \
-    omni_selene-eng
+    pb_selene-user \
+    pb_selene-userdebug \
+    pb_selene-eng
