@@ -62,9 +62,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service-recovery \
     android.hardware.gatekeeper@1.0-impl-recovery
 
-PRODUCT_PACKAGES += \
-    libshim_beanpod
-
 PRODUCT_PROPERTY_OVERRIDES += \
     keymaster_ver=4.0 \
     persist.sys.fuse.passthrough.enable=true
