@@ -44,6 +44,13 @@ PRODUCT_PACKAGES += \
     update_verifier \
     update_engine_sideload
 
+# Vibrator modules
+TARGET_RECOVERY_DEVICE_MODULES += \
+    android.hardware.vibrator-V2-ndk.so
+
+RECOVERY_LIBRARY_SOURCE_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.vibrator-V2-ndk.so
+
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 31
 
