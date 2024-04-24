@@ -18,7 +18,6 @@ AB_OTA_PARTITIONS += \
     vbmeta \
     vbmeta_system \
     vbmeta_vendor
-BOARD_USES_RECOVERY_AS_BOOT := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -52,6 +51,7 @@ BOARD_KERNEL_CMDLINE := \
 	loop.max_part=7 \
 	androidboot.init_fatal_reboot_target=recovery\
 	androidboot.selinux=permissive
+
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -67,7 +67,9 @@ BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_INCLUDE_RECOVERY_DTBO := true
 
-# Metadata
+# Partitions configs
+BOARD_USES_RECOVERY_AS_BOOT := true
+TARGET_NO_RECOVERY := true
 BOARD_USES_METADATA_PARTITION := true
 
 # Partitions
