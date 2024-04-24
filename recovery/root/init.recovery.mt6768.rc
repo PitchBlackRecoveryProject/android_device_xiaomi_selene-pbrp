@@ -29,6 +29,12 @@ service keymaster-4-0 /system/bin/android.hardware.keymaster@4.0-service.beanpod
     oneshot
     seclabel u:r:recovery:s0
 
+service vibrator-selene /system/bin/hw/android.hardware.vibrator-service.selene
+    user root
+    group root
+    class hal
+    seclabel u:r:recovery:s0
+
 on property:vendor.sys.listener.registered=true
     start keymaster-4-0
     start gatekeeper-1-0
@@ -55,6 +61,7 @@ on property:twrp.decrypt.done=true
 on boot
     start boot-hal-1-2
     start health-hal-2-1
+    start vibrator-selene
 
 # Enable DT2W
 on post-fs
