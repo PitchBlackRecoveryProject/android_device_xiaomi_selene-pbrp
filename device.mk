@@ -21,6 +21,19 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl \
     android.hardware.boot@1.2-impl.recovery
 
+# Health HAL
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service \
+    libhealthd.$(PRODUCT_PLATFORM)
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctrl
+
+PRODUCT_PACKAGES += \
+    bootctrl.mt6768 \
+    bootctrl.mt6768.recovery
+
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
@@ -60,12 +73,6 @@ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service-recovery \
     android.hardware.gatekeeper@1.0-impl-recovery
-
-# Health HAL
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service \
-    libhealthd.$(PRODUCT_PLATFORM)
 
 # libion & libxml2
 TARGET_RECOVERY_DEVICE_MODULES += \
