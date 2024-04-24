@@ -34,6 +34,10 @@ PRODUCT_PACKAGES += \
     bootctrl.mt6768 \
     bootctrl.mt6768.recovery
 
+PRODUCT_PACKAGES += \
+    create_pl_dev \
+    create_pl_dev.recovery
+
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
